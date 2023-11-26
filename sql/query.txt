@@ -1,0 +1,46 @@
+1. Selecting Data:
+	sql
+	SELECT * FROM your_table;
+	SELECT column1, column2 FROM your_table WHERE condition;
+2. Filtering Data:
+	sql
+	SELECT * FROM your_table WHERE column = 'value';
+3. Sorting Data:
+	sq
+	SELECT * FROM your_table ORDER BY column ASC/DESC;
+4. Inserting Data:
+	sql
+	INSERT INTO your_table (column1, column2) VALUES ('value1', 'value2');
+5. Updating Data:
+	sql
+	UPDATE your_table SET column1 = 'new_value' WHERE condition;
+6. Deleting Data:
+	sql
+	DELETE FROM your_table WHERE condition;
+
+#### Aggregation Functions:
+	sql
+	SELECT COUNT(column) FROM your_table;
+	SELECT AVG(column) FROM your_table;
+
+### Joins:
+	sql
+	SELECT * FROM table1 INNER JOIN table2 ON table1.column = table2.column;
+Grouping Data:
+	sql
+	SELECT column, COUNT(*) FROM your_table GROUP BY column;
+Subqueries:
+	sql
+	SELECT column FROM your_table WHERE column IN (SELECT column FROM another_table);
+
+Creating Tables:
+	sql
+	CREATE TABLE new_table (column1 datatype, column2 datatype);
+
+Altering Tables:
+	sql
+	ALTER TABLE your_table ADD COLUMN new_column datatype;
+
+Deleting Tables:
+	sql
+	DROP TABLE your_table;
