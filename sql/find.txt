@@ -1,0 +1,43 @@
+========================== findByPk
+// Retrieve a user with the specified ID from the database
+        const user = await db.user.findByPk(userId);
+========================== findOne
+// Retrieve a user with the specified ID from the database
+        const user = await db.user.findOne({
+            where: {
+                id: userId
+            }
+        });
+========================== findAll
+// You can read the whole table from the database with the findAll method:
+	const users = await User.findAll();
+========================== findAll  attributes
+// To select only some attributes, you can use the attributes option:
+	Model.findAll({
+	  attributes: ['foo', 'bar']
+	});
+//Attributes can be renamed using a nested array:
+	Model.findAll({
+	  attributes: ['foo', ['bar', 'baz'], 'qux']
+	});
+========================== And operator 
+// Just like Sequelize inferred the Op.eq operator in the first example, here Sequelize inferred that the caller wanted an AND for the two checks. The code above is equivalent to:
+	const { Op } = require("sequelize");
+	Post.findAll({
+	  where: {
+	    [Op.and]: [
+	      { authorId: 12 },
+	      { status: 'active' }
+	    ]
+	  }
+	});
+// An OR can be easily performed in a similar way:
+	const { Op } = require("sequelize");
+	Post.findAll({
+	  where: {
+	    [Op.or]: [
+	      { authorId: 12 },
+		      { authorId: 13 }
+	    ]
+	  }
+	});

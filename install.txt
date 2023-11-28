@@ -1,6 +1,5 @@
-mysql --version
-mysql -u root -p 
-mypassword
-show databases;
-
-if show default databases so install successfully
+npm init  
+npm install --save sequelize
+npm i express
+npm i mysql2
+npm i body-parser 

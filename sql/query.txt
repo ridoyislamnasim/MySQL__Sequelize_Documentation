@@ -1,3 +1,29 @@
+
+1. CREATE  database:
+	CREATE DATABASE your_database_name;
+2. Connect to the Database:
+	sql
+	USE your_database_name;
+3. SHOW TABLES FROM your_database_name;
+
+3. Create the Table:
+	sql
+	CREATE TABLE employees (
+	    employee_id INT PRIMARY KEY,
+	    first_name VARCHAR(50),
+	    last_name VARCHAR(50),
+	    job_title VARCHAR(100),
+	    salary DECIMAL(10, 2)
+	);
+4. Insert Data into the Table:
+	sql
+	INSERT INTO employees (employee_id, first_name, last_name, job_title, salary)
+	VALUES
+	    (1, 'John', 'Doe', 'Software Engineer', 75000.00),
+	    (2, 'Jane', 'Smith', 'Data Analyst', 60000.00),
+	    (3, 'Bob', 'Johnson', 'Project Manager', 85000.00);
+
+
 1. Selecting Data:
 	sql
 	SELECT * FROM your_table;

@@ -1,0 +1,6 @@
+mysql --version
+mysql -u root -p 
+mypassword
+show databases;
+
+if show default databases so install successfully
